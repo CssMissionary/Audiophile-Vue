@@ -204,7 +204,7 @@ color: var(--color-white-light);
         height: auto;
     }
     .container-three .left{
-        background-image: url('@/asssets/home/mobile/image-earphones-yx1.jpg') center no-repeat;
+        background-image: url('@/assets/home/mobile/image-earphones-yx1.jpg') center no-repeat;
         width: 100%;
         height: 250px;
         border-radius: 10px;
@@ -218,7 +218,4 @@ color: var(--color-white-light);
         margin-left: 40px;
     }
 }
-
-
-
 </style>
