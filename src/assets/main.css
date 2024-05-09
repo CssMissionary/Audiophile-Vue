@@ -1,0 +1,36 @@
+#app {
+  font-family: "Manrope", sans-serif;
+}
+:root{
+  --color-brown-dark: #D87D4A;
+  --color-brown-light:#fbaf85;
+  --color-black-dark: #000000;
+  --color-black-light: #323131;  
+  --color-white-dark: #F1F1F1;
+  --color-white-medium: #FAFAFA;
+  --color-white-light: #FFFFFF;
+}
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 140px;
+  width: 80vw;
+  margin-top: 70px;
+}
+
+@media (min-width: 1024px) {
+}
