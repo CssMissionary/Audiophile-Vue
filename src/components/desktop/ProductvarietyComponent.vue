@@ -21,15 +21,15 @@ export default {
         return{
             products: [
                 {
-                    img: '@/assets/shared/desktop/image-category-thumbnail-headphones.png',
+                    img: './src/assets/shared/desktop/image-category-thumbnail-headphones.png',
                     title: 'headphones',
                 },
                 {
-                    img: '@/assets/shared/desktop/image-category-thumbnail-speakers.png',
+                    img: './src/assets/shared/desktop/image-category-thumbnail-speakers.png',
                     title: 'speakers'
                 },
                 {
-                    img: '@/assets/shared/desktop/image-category-thumbnail-earphones.png',
+                    img: './src/assets/shared/desktop/image-category-thumbnail-earphones.png',
                     title: 'earphones'
                 }
                 
