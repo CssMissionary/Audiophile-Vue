@@ -143,7 +143,8 @@ export default {
     }
     .counter button{
         border: none;
-        background-color: none;
+        background: none;
+        outline: none;
         cursor: pointer;
         font-size: 1.2rem;
         opacity: 0.8;
@@ -336,6 +337,7 @@ export default {
         }
         .other_product h1{
             font-size: 1.5rem;
+            margin-left: 30px;
         }
         .list{
             flex-direction: column;
@@ -344,6 +346,9 @@ export default {
         width: 300px;
         height: 300px;
         margin-left: 40px;
+       }
+       .number{
+        padding-left: 0;
        }
     }
 

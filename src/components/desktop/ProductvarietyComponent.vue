@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box" id="box">
         <div class="container flex" v-for="(product, index) in products" :key="index">
             <div class="product">
                 <img :src="product.img" alt="">
@@ -21,15 +21,15 @@ export default {
         return{
             products: [
                 {
-                    img: '/src/assets/shared/desktop/image-category-thumbnail-headphones.png',
+                    img: '@/assets/shared/desktop/image-category-thumbnail-headphones.png',
                     title: 'headphones',
                 },
                 {
-                    img: '/src/assets/shared/desktop/image-category-thumbnail-speakers.png',
+                    img: '@/assets/shared/desktop/image-category-thumbnail-speakers.png',
                     title: 'speakers'
                 },
                 {
-                    img: '/src/assets/shared/desktop/image-category-thumbnail-earphones.png',
+                    img: '@/assets/shared/desktop/image-category-thumbnail-earphones.png',
                     title: 'earphones'
                 }
                 

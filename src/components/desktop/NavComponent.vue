@@ -1,6 +1,6 @@
 <template>
   <nav class="flex">
-    <img src="@/assets/shared/tablet/icon-hamburger.svg" alt="" class="hamburger" @click="scrollToMenu">
+    <a href="#box"><img src="@/assets/shared/tablet/icon-hamburger.svg" alt="" class="hamburger"></a>
     <RouterLink to="/"><img src="@/assets/shared/desktop/logo.svg" alt="logo"></RouterLink>
     <ul>
       <RouterLink :to="{name: 'home'}">Home</RouterLink>
@@ -230,7 +230,7 @@ ul a:hover, ul a.router-link-active{
   }
     .cart{
     top: 90px;
-    right: 25vw;
+    right: 12vw;
     width: 320px;
   }
 }

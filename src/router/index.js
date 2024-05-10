@@ -40,7 +40,10 @@ const router = createRouter({
       component: () => import ('../views/CheckoutPageView.vue'),
     
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
 
 export default router
