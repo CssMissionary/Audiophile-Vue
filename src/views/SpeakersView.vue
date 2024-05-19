@@ -12,7 +12,7 @@
 </style>
 
 <script>
-import StoredData from "@/assets/data.json"
+import StoredData from "@/assets/data"
 import ProductvarietyComponent from '../components/desktop/ProductvarietyComponent.vue';
 import BrownbuttonComponent from '@/components/desktop/BrownbuttonComponent.vue';
 import ProductlineComponent from '@/components/desktop/ProductlineComponent.vue';

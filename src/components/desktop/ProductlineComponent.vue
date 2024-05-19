@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import StoredData from "@/assets/data.json"
+import StoredData from "@/assets/data"
 import BrownbuttonComponent from './BrownbuttonComponent.vue'
 
 export default {

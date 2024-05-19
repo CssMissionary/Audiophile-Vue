@@ -59,7 +59,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import StoredData from '@/assets/data.json'
+import StoredData from '@/assets/data'
 import BrownbuttonComponent from '@/components/desktop/BrownbuttonComponent.vue'
 
 export default {
