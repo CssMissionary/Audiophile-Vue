@@ -345,7 +345,7 @@ export default {
        .list li img{
         width: 300px;
         height: 300px;
-        margin-left: 40px;
+        margin-left: 20px;
        }
        .number{
         padding-left: 0;

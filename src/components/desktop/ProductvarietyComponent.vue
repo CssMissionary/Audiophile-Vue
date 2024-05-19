@@ -77,7 +77,7 @@ p{
     justify-content: center;
     flex-direction: column;
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: 0;
     padding: 0;
    }
    .container{

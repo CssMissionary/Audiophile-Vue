@@ -31,5 +31,8 @@ export default{
 </template>
 
 <style scoped>
-
+div{
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 </style>

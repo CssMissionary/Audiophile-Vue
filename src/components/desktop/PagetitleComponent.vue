@@ -37,7 +37,7 @@ export default {
     .hero{
         height: 100px;
         padding: 0 50px;
-        margin-top: 84px;
+        margin-top: 74px;
     }
     .hero h1{
         margin-top: 30px;
