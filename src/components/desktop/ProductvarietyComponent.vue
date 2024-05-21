@@ -77,8 +77,9 @@ p{
     justify-content: center;
     flex-direction: column;
     margin-top: -20px;
-    margin-left: 0;
+    margin-left: 20px;
     padding: 0;
+    height: fit-content;
    }
    .container{
     margin-bottom: -80px;

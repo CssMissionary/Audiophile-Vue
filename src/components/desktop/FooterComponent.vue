@@ -86,7 +86,7 @@ p{
 }
 @media screen and (max-width: 480px) {
     .container{
-        height: 1000px;
+        height: 800px;
     }
     nav{
         flex-direction: column;

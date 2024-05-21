@@ -1,6 +1,6 @@
 <template>
   <nav class="flex">
-    <a href="#box"><img src="@/assets/shared/tablet/icon-hamburger.svg" alt="" class="hamburger"></a>
+  <img src="@/assets/shared/tablet/icon-hamburger.svg" alt="" class="hamburger" @click="menuToggle">
     <RouterLink to="/"><img src="@/assets/shared/desktop/logo.svg" alt="logo"></RouterLink>
     <ul>
       <RouterLink :to="{name: 'home'}">Home</RouterLink>
@@ -44,13 +44,21 @@
       </div>
       <RouterLink :to="{ name: 'checkout' }" class="checkout" @click="showModal">CHECKOUT</RouterLink>
     </div>
-
   </nav>
+  <div class="menu" v-show="menuOpen">
+    <ProductvarietyComponent />
+  </div>
 </template>
 
 <script>
 import { mapState, mapGetters, mapMutations } from 'vuex';
+import ProductvarietyComponent from './ProductvarietyComponent.vue';
 export default {
+  data(){
+    return{
+      menuOpen: false
+    }
+  },
   props: {
     modalOpen: Boolean
   },
@@ -65,7 +73,13 @@ export default {
     },
     scrollToMenu(){
       window.scrollTo({top: 550, behavior: 'smooth'})
+    },
+    menuToggle(){
+      this.menuOpen = !this.menuOpen
     }
+  },
+  components: {
+    ProductvarietyComponent
   }
 }
 </script>
@@ -215,6 +229,7 @@ ul a:hover, ul a.router-link-active{
   text-decoration: underline;
   color: var(--color-brown-dark);
 }
+
 @media screen and (max-width: 480px) {
   .hamburger{
     display: block;
@@ -233,6 +248,17 @@ ul a:hover, ul a.router-link-active{
     right: 12vw;
     width: 320px;
   }
+  .menu{
+    width: 100vw;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: auto;
+    background-color: white;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
 }
 
 

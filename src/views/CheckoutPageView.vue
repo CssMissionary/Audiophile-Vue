@@ -1,7 +1,7 @@
 <template>
-    <div class="checkout-page">
+    <form class="checkout-page" @submit.prevent="submitForm">
         <div class="left-checkout-form">
-            <form @submit.prevent>
+            <div class="fill_in" >
                 <h1>CHECKOUT</h1>
                 <div class="billing">
                     <h4>BILLING DETAILS</h4>
@@ -49,7 +49,7 @@
                         <label class="select flex" for="checkbox1" @click="emoneyTick">
                             <p>E-money</p>
                         </label>
-                        <input type="checkbox" name="" id="checkbox2">
+                        <input type="checkbox" name="" id="checkbox2" checked>
                         <label class="select flex" for="checkbox2" @click="cashdeliveryTick">
                             <p>Cash on Delivery</p>
                         </label>
@@ -69,7 +69,7 @@
                         <p>The 'Cash on Delivery' option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="right-cart-item-list">
             <h3>SUMMARY</h3>
@@ -102,10 +102,12 @@
                     <h4 class="head">GRAND TOTAL</h4>
                     <h4 style="color: var(--color-brown-dark);">${{grandTotal}}</h4>
                 </div>
-                <RouterLink :to="{ name: 'checkout' }" class="checkout" @click="checkoutDisplay">CONTINUE & PAY
-                </RouterLink>
+                <!-- <RouterLink :to="{ name: 'checkout' }" class="checkout" @click="checkoutDisplay" type="submit">CONTINUE & PAY
+                </RouterLink> -->
+                <button type="submit" class="checkout">CONTINUE & PAY</button>
             </div>
         </div>
+    </form>
         <div class="modal flex" v-if="checkoutShow">
             <div class="summary">
                 <img src="@/assets/checkout/icon-order-confirmation.svg" alt="">
@@ -137,10 +139,9 @@
                         <h3>${{ grandTotal }}</h3>
                     </div>
                 </div>
-                <RouterLink :to="{ name: 'home' }">BACK TO HOME</RouterLink>
+                <RouterLink :to="{ name: 'home' }" class="checkout">BACK TO HOME</RouterLink>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -150,13 +151,10 @@ export default {
         return{
             checkoutShow: false,
             eMoney: false,
-            cashDelivery: false
+            cashDelivery: true
         }
     },
     methods: {
-        checkoutDisplay(){
-            this.checkoutShow = true
-        },
         emoneyTick(){
             document.getElementById('checkbox2')
                 this.eMoney = !this.eMoney
@@ -168,18 +166,24 @@ export default {
             this.cashDelivery = !this.cashDelivery
             checkbox1.checked = false
             this.eMoney = false
+        },
+        submitForm(){
+            this.$router.push({name: 'checkout'})
+            this.checkoutShow = true
         }
     },
     computed: {
         ...mapState(['cart']),
         ...mapGetters(['cartTotal', 'grandTotal', 'vatCalculator']),
-
     }
 
 }
 </script>
 
 <style scoped>
+.fill_in{
+    padding: 40px;
+}
     .checkout-page{
         width: 100%;
         height: 200vh;
@@ -234,7 +238,6 @@ export default {
         color: var(--color-brown-dark);
         margin-bottom: 20px;
     }
-   
     .payment .field{
         margin-left: 350px;
         flex-direction: column;
@@ -304,7 +307,7 @@ export default {
     .summary{
         width: 600px;
         height: 530px;
-        margin-top: -100px;
+        margin-top: -50px;
         border-radius: 10px;
         background-color: var(--color-white-light);
         padding: 40px;
@@ -338,7 +341,7 @@ export default {
         padding-left: 30px;
         color: var(--color-white-light);
     }
-    .summary a  {
+    .checkout  {
     width: 100%;
     height: 40px;
     color: var(--color-white-light);
@@ -352,7 +355,7 @@ export default {
     justify-content: center;
     margin-top: 40px;
     }
-    .summary a:hover {
+    .checkout:hover {
     background-color: var(--color-brown-light);
     transition: 0.3s ease-in-out;
     }
